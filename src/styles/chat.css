@@ -1,0 +1,90 @@
+/* Avatar del robot */
+.cat-avatar {
+  position: relative;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #f7c59f, #f6e7d8); /* tonos cálidos */
+  border-radius: 50%; /* completamente circular */
+  box-shadow: 0 0 15px #ff8c42, inset 0 0 8px #ffa756; /* brillo anaranjado */
+}
+
+/* Ojos roboticos - círculos con brillo */
+.cat-eyes {
+  position: absolute;
+  top: 55px;
+  left: 48px;
+  display: flex;
+  gap: 30px;
+}
+
+.cat-eye {
+  width: 24px;
+  height: 24px;
+  background-color: #ff3c38; /* rojo intenso */
+  border-radius: 50%; /* completamente redondos */
+  box-shadow: 0 0 10px #ff3c38;
+  position: relative;
+}
+
+/* Sin pupilas */
+.pupil {
+  display: none;
+}
+
+/* Boca digital */
+#cat-mouth {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 20px;
+  background: #7b2cbf; /* púrpura oscuro */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #e0aaff inset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+#cat-mouth.talking {
+  animation: mouthTalking 0.4s infinite;
+}
+
+/* LED en la boca - tonos púrpura y rosado */
+#cat-mouth::before,
+#cat-mouth::after,
+#cat-mouth span {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 8px;
+  background: #ff9de2;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #ff9de2;
+  animation: blinkLed 1.5s infinite alternate;
+}
+
+#cat-mouth::after {
+  animation-delay: 0.75s;
+}
+
+#cat-mouth span {
+  animation-delay: 1s;
+}
+
+@keyframes blinkLed {
+  0% {opacity: 1;}
+  100% {opacity: 0.2;}
+}
+
+@keyframes mouthTalking {
+  0%, 100% {
+    box-shadow: 0 0 10px #e0aaff inset;
+  }
+  50% {
+    box-shadow: 0 0 18px #ffb3ff inset;
+  }
+}

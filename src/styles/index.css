@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fef6e4; /* fondo claro cálido */
+  color: #4b3832; /* texto en marrón oscuro suave */
+}
+
+code {
+  font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #ffe9ec;
+  color: #c9184a;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* index.css */
+.leaflet-container {
+  height: 70vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid #f28500; /* naranja vivo */
+  border-radius: 20px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(255, 163, 71, 0.4);
+  background-color: #fff8f0; /* fondo crema suave */
+}
+
+

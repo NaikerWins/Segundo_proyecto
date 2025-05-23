@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* degradado vibrante */
+  color: #2c003e; /* morado oscuro para texto */
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título principal */
+h1 {
+  color: #ff007f; /* rosa fuerte */
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 6px rgba(255, 0, 127, 0.3);
+}
+
+/* Código destacado */
+code {
+  font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #36003f;
+  color: #ff61a6;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Mapa o contenedor principal */
+.leaflet-container {
+  height: 70vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 3px solid #7f00ff; /* púrpura fuerte */
+  border-radius: 20px;
+  padding: 0.8rem;
+  box-shadow: 0 12px 30px rgba(127, 0, 255, 0.4);
+  background: #2d0030; /* fondo oscuro elegante */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leaflet-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(127, 0, 255, 0.6);
+}

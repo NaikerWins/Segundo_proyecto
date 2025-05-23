@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #0d1b2a; /* Cambiado de gris oscuro a azul muy oscuro */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f1f1f1; /* Cambiado a gris claro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2rem;
+  box-shadow: inset 0 0 20px #1b263b;
+  border: 3px solid #415a77;
+  border-radius: 15px;
+}
+
+.App-link {
+  color: #fca311; /* Cambiado de negro a naranja vibrante */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #ffd60a;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ocultar la barra de scroll pero permitir el scroll */
+.customers-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.customers-scrollbar::-webkit-scrollbar {
+  width: 0px;                    /* Chrome/Safari/Edge */
+  background: transparent;
+}
+
+
+

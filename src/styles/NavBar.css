@@ -1,0 +1,184 @@
+.navbar {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 60px;
+    background: linear-gradient(90deg, #ffdde1 0%, #ee9ca7 100%);
+    box-shadow: 0 4px 12px rgba(238, 156, 167, 0.6);
+    z-index: 1000;
+    border-bottom: 2px solid #ff6f91;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: #4a1c40;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #fcd1d1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #4a1c40;
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.navbar-toggle:hover {
+    color: #ff6f91;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #4a1c40;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    background: #ffe4e9;
+    box-shadow: 0 2px 6px rgba(255, 111, 145, 0.4);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.navbar-links li a:hover,
+.navbar-links li a.active {
+    background: #ff6f91;
+    color: #fff;
+    font-weight: 700;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 111, 145, 0.7);
+}
+
+.navbar-dropdown {
+    position: relative;
+}
+
+.navbar-dropdown-btn {
+    background: #ffe4e9;
+    border: none;
+    color: #4a1c40;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(255, 111, 145, 0.4);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.navbar-dropdown-btn:hover,
+.navbar-dropdown-menu li a.active {
+    background: #ff6f91;
+    color: #fff;
+    font-weight: 700;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 111, 145, 0.7);
+}
+
+.navbar-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: #ffe4e9;
+    box-shadow: 0 6px 20px rgba(255, 111, 145, 0.4);
+    border-radius: 0 0 12px 12px;
+    z-index: 1001;
+    padding: 0.5rem 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar-dropdown-menu.show {
+    display: block;
+}
+
+.navbar-dropdown-menu li {
+    width: 100%;
+}
+
+.navbar-dropdown-menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #4a1c40;
+    text-decoration: none;
+    border-radius: 0;
+    background: none;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+.navbar-dropdown-menu li a:hover,
+.navbar-dropdown-menu li a.active {
+    background: #ff6f91;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .navbar-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: linear-gradient(180deg, #ee9ca7 0%, #ffdde1 100%);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        box-shadow: 0 6px 20px rgba(238, 156, 167, 0.4);
+    }
+
+    .navbar-links.open {
+        max-height: 600px;
+        padding-bottom: 1.2rem;
+    }
+
+    .navbar-links li {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        min-width: 0;
+        background: none;
+        padding: 0;
+    }
+    .navbar-dropdown-menu li a {
+        padding-left: 40px;
+    }
+}
