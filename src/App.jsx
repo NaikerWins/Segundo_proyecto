@@ -4,7 +4,7 @@ import { CustomerProvider } from "./context/CustomerContext";
 import Login from "./pages/Login/LoginPage";
 import CustomersPage from "./pages/Customer/CustomersPage";
 import MotorcyclePage from "./pages/Motorcycle/MotorcyclePage";
-import ShiftsPage from "./pages/Shifts/ShiftsPage";
+import ShiftsPage from "./pages/Shifts/shiftsPage";
 import NavBar from "./components/Navbar/navBar";
 import MotoMapRealtime from "./components/Map/MotoMap"
 import ProductosCrud from './pages/productos/productosCrud';
